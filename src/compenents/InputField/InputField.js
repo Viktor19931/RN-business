@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, TextInput } from 'react-native';
+import { View, StyleSheet, TextInput } from 'react-native';
 
 const inputField = (props) => (
     <View style={styles.container}>
@@ -8,8 +8,8 @@ const inputField = (props) => (
             autoCapitalize = "none"
             autoCorrect={false}
             placeholderTextColor='black'
-            {...props}
-            style={styles.inputStyle}
+            { ...props }
+            style={[styles.inputStyle, !props.valid && props.touched ? styles.invalid : null]}
         />
     </View>
 );
@@ -25,6 +25,10 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: '#000',
 
+    },
+    invalid: {
+        backgroundColor: '#f9c0c0',
+        borderColor: 'red'
     }
 });
 

@@ -1,21 +1,52 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
+import { View, StyleSheet, Text, TouchableOpacity, KeyboardAvoidingView } from 'react-native';
 
 import startMainTabs from '../../compenents/MainTabs/startMainTabs';
 import InputField from "../../compenents/InputField/InputField";
 import Button from "../../compenents/Button/Button";
 import Logo from "./Logo";
+import validate from "../../utility/validation";
 
 class Login extends Component {
     state = {
-        authMode: 'login'
+        form: {
+            valid: true,
+            touched: false
+        },
+        controls: {
+            email: {
+                value: "",
+                valid: false,
+                validationRules: {
+                    isEmail: true
+                },
+                touched: false
+            },
+            password: {
+                value: "",
+                valid: false,
+                validationRules: {
+                    minLength: 6
+                },
+                touched: false
+            },
+            confirmPassword: {
+                value: "",
+                valid: false,
+                validationRules: {
+                    equalTo: 'password'
+                },
+                touched: false
+            }
+        }
     };
+
     static navigatorStyle = {
         tabBarHidden: true
     };
 
     onLoginPressed = () => {
-        alert('button Pressed !');
+
         // startMainTabs();
     };
 
@@ -39,25 +70,59 @@ class Login extends Component {
         });
     };
 
+    updateInputState = (key, value) => {
+        this.setState(prevState => {
+            return {
+                ...prevState,
+                controls: {
+                    ...prevState.controls,
+                    [key]: {
+                        ...prevState.controls[key],
+                        value: value,
+                        valid: validate(
+                            value,
+                            prevState.controls[key].validationRules,
+                        ),
+                        touched: true
+                    },
+                }
+            };
+        });
+    };
+
     render() {
-        const { contentWrapper, inputContainer, btnWrapper, optionContainer, textStyle, main } = styles;
+        const { contentWrapper, inputContainer, btnWrapper, optionContainer, textStyle, main, disabledBtn } = styles;
+        const { email, password } = this.state.controls;
         return (
-            <View style={contentWrapper}>
+            <KeyboardAvoidingView style={contentWrapper} behavior={'padding'}>
                 <Logo />
                 <View style={main}>
                     <View style={inputContainer}>
                         <InputField
                             placeholder="Username/email"
+                            value={email.value}
+                            onChangeText={(val) => this.updateInputState('email', val)}
+                            valid={email.valid}
+                            touched={email.touched}
                         />
                         <InputField
                             placeholder="Password"
+                            value={password.value}
+                            onChangeText={(val) => this.updateInputState('password', val)}
+                            valid={password.valid}
+                            touched={password.touched}
+                            secureTextEntry
                         />
                         <View style={btnWrapper}>
                             <View style={[btnWrapper, { justifyContent: 'center'} ]}>
                                 <Button
                                     onPress={this.onLoginPressed}
                                     backgroundColor="#D6D6D6"
-                                    style={styles.btnLogin}
+                                    style={[
+                                        styles.btnLogin,
+                                        !email.valid || !password.valid ? disabledBtn : null
+                                    ]}
+                                    disabled={!email.valid || !password.valid}
                                 >Login</Button>
                             </View>
                         </View>
@@ -71,7 +136,7 @@ class Login extends Component {
                         </TouchableOpacity>
                     </View>
                 </View>
-            </View>
+            </KeyboardAvoidingView>
         );
     }
 }
@@ -114,6 +179,10 @@ const styles = StyleSheet.create({
     },
     btnLogin: {
         marginTop: 37
+    },
+    disabledBtn: {
+        opacity: .5,
+        // backgroundColor: 'red'
     }
 });
 
