@@ -9,7 +9,11 @@ const inputField = (props) => (
             autoCorrect={false}
             placeholderTextColor='black'
             { ...props }
-            style={[styles.inputStyle, !props.valid && props.touched ? styles.invalid : null]}
+            style={[
+                styles.inputStyle,
+                props.style,
+                !props.valid && props.touched ? styles.invalid : null
+            ]}
         />
     </View>
 );

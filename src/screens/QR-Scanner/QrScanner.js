@@ -3,10 +3,10 @@ import {
     StyleSheet,
     Text,
     View,
-    TouchableOpacity,
-    Button
+    TouchableOpacity
 } from 'react-native';
 import QRCodeScanner from 'react-native-qrcode-scanner';
+import Button from "../../compenents/Button/Button";
 
 export default class QrScanner extends Component {
     state = {
@@ -28,13 +28,33 @@ export default class QrScanner extends Component {
         });
     };
 
+    onLogOut = () => {
+        this.props.navigator.push({
+            screen: 'App.LoginScreen',
+            title: 'Login',
+            // navigatorButtons: {
+            //     leftButtons: [
+            //         {}
+            //     ]
+            // },
+            backButtonHidden: true
+        })
+    };
+
     render() {
         let content = (
-            <Button
-                onPress={this.onOpenQRcode}
-                title="Scan QR-Code"
-                color="#841584">
-            </Button>
+            <View>
+                <Button onPress={this.onOpenQRcode}>
+                    Scan QR-Code
+                </Button>
+                <Button
+                    onPress={this.onLogOut}
+                    backgroundColor={'grey'}
+                    style={{marginTop: 20}}
+                >
+                    Log Out
+                </Button>
+            </View>
         );
 
         if (this.state.mode === 'qr-code') {

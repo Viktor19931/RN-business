@@ -13,6 +13,7 @@ const validate = (val, rules, connectedValue) => {
                 break;
             case 'notEmpty':
                 isValid = isValid && notEmptyValidator(val);
+                break;
             default:
                 isValid = true;
         }

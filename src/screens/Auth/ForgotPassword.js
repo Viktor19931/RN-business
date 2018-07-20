@@ -1,16 +1,52 @@
-import React, {Component} from 'react';
-import {View, ScrollView, Text, StyleSheet} from 'react-native';
+import React, { Component } from 'react';
+import { View, StyleSheet } from 'react-native';
+
 import Button from "../../compenents/Button/Button";
 import InputField from "../../compenents/InputField/InputField";
 import Logo from "./Logo";
+import validate from "../../utility/validation";
+
 
 class ForgotPassword extends Component {
+    state = {
+        controls: {
+            email: {
+                value: "",
+                valid: false,
+                validationRules: {
+                    isEmail: true
+                },
+                touched: false
+            },
+        }
+    };
+
     toLogin = () => {
         this.props.navigator.pop({
             animationType: "slide-horizontal"
         });
-
     };
+
+    updateInputState = (key, value) => {
+        this.setState(prevState => {
+            return {
+                ...prevState,
+                controls: {
+                    ...prevState.controls,
+                    [key]: {
+                        ...prevState.controls[key],
+                        value: value,
+                        valid: validate(
+                            value,
+                            prevState.controls[key].validationRules
+                        ),
+                        touched: true
+                    },
+                },
+            };
+        });
+    };
+
     render() {
         const { contentWrapper, main, inputContainer, btnWrapper } = styles;
         return (
@@ -20,6 +56,11 @@ class ForgotPassword extends Component {
                     <View style={inputContainer}>
                         <InputField
                             placeholder="Username/email"
+                            keyboardType="email-address"
+                            value={this.state.controls.email.value}
+                            onChangeText={(val) => this.updateInputState('email', val)}
+                            valid={this.state.controls.email.valid}
+                            touched={this.state.controls.email.touched}
                         />
                         <View style={btnWrapper}>
                             <Button
@@ -31,6 +72,7 @@ class ForgotPassword extends Component {
                                 onPress={this.onRegister}
                                 backgroundColor="#D6D6D6"
                                 style={styles.btnLogin}
+                                disabled={!this.state.controls.email.valid}
                             >Send</Button>
                         </View>
                     </View>

@@ -46,8 +46,7 @@ class Login extends Component {
     };
 
     onLoginPressed = () => {
-
-        // startMainTabs();
+        startMainTabs();
     };
 
     toRegister = () => {
@@ -100,6 +99,7 @@ class Login extends Component {
                     <View style={inputContainer}>
                         <InputField
                             placeholder="Username/email"
+                            keyboardType="email-address"
                             value={email.value}
                             onChangeText={(val) => this.updateInputState('email', val)}
                             valid={email.valid}
@@ -182,7 +182,6 @@ const styles = StyleSheet.create({
     },
     disabledBtn: {
         opacity: .5,
-        // backgroundColor: 'red'
     }
 });
 
