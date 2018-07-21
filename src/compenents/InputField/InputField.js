@@ -2,7 +2,7 @@ import React from 'react';
 import { View, StyleSheet, TextInput } from 'react-native';
 
 const inputField = (props) => (
-    <View style={styles.container}>
+    <View style={[styles.container, props.containerStyle]}>
         <TextInput
             underlineColorAndroid="transparent"
             autoCapitalize = "none"

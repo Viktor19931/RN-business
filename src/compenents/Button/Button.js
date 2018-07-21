@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, StyleSheet, TouchableOpacity } from 'react-native';
+import {Text, StyleSheet, TouchableOpacity, Image} from 'react-native';
 
 const Button = (props) => (
     <TouchableOpacity
@@ -10,7 +10,11 @@ const Button = (props) => (
             props.style,
             props.disabled ? styles.btnDisabled : null
         ]}>
-        <Text style={styles.text}>{props.children}</Text>
+        <Image
+            source={props.source ? props.source : null}
+            style={props.source ? [styles.image, props.imageStyle]: null}
+        />
+        <Text style={[styles.text, props.textStyle]}>{props.children}</Text>
     </TouchableOpacity>
 );
 
@@ -27,6 +31,11 @@ const styles = StyleSheet.create({
     },
     btnDisabled: {
         opacity: .5
+    },
+    image: {
+        height: 18,
+        width: 18,
+        marginHorizontal: 5
     }
 });
 

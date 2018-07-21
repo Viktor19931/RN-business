@@ -15,20 +15,20 @@ class Login extends Component {
         },
         controls: {
             email: {
-                value: "",
-                valid: false,
+                value: "mail@gmail.com",
+                valid: true,
                 validationRules: {
                     isEmail: true
                 },
-                touched: false
+                touched: true
             },
             password: {
-                value: "",
-                valid: false,
+                value: "111111",
+                valid: true,
                 validationRules: {
                     minLength: 6
                 },
-                touched: false
+                touched: true
             },
             confirmPassword: {
                 value: "",

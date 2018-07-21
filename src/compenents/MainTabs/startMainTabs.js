@@ -1,26 +1,28 @@
 import { Navigation } from 'react-native-navigation';
-import ico from "../../assets/icons8-contract-30.png";
+import profile from "../../assets/icons8-user-30.png";
+import assignment from "../../assets/icons8-course-assign-30.png";
+import ranking from "../../assets/icons8-leaderboard-30.png";
 
 const startTabs = () => {
     Navigation.startTabBasedApp({
         tabs: [
             {
-                screen: "App.Tab1",
-                label: "Tab1",
-                title: "Tab1",
-                icon: ico,
+                screen: "App.DashboardScreen",
+                label: "Profile",
+                title: "UR Business - Dashboard",
+                icon: profile,
             },
             {
-                screen: "App.Tab2",
-                label: "Tab2",
-                title: "Tab2",
-                icon: ico,
+                screen: "App.AssignmentsScreen",
+                label: "Assignments",
+                title: "UR Business - Assignments",
+                icon: assignment,
             },
             {
                 screen: "App.Tab3",
-                label: "Tab3",
-                title: "Tab3",
-                icon: ico
+                label: "Ranking",
+                title: "UR Business - Rankings",
+                icon: ranking
             }
         ],
         // animationType: 'slide-down'

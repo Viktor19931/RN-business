@@ -131,6 +131,7 @@ class Register extends Component {
                     ...prevState.controls,
                     confirmPassword: {
                         ...prevState.controls.confirmPassword,
+                        value: prevState.controls.confirmPassword.value,
                         valid: key === 'password'
                             ? validate(
                                 prevState.controls.confirmPassword.value,
