@@ -10,6 +10,8 @@ class SwotAnalysis extends Component {
         this.props.navigator.push({
             screen: 'App.SwotAnalysisAcceptedScreen',
             title: 'Swot Analysis',
+            animationType: 'slide-horizontal',
+            backButtonTitle: '',
             passProps: { ...this.props}
         });
     };
@@ -52,7 +54,8 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         padding: 10,
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        backgroundColor: '#fff'
     },
     rowStyle: {
         flexDirection: 'row',

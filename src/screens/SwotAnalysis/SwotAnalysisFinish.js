@@ -33,7 +33,9 @@ class SwotAnalysisFinish extends Component {
     onFillCode = () => {
         this.props.navigator.push({
             screen: "App.FillCodeScreen",
-            title: 'Swot Analysis'
+            title: 'Swot Analysis',
+            animationType: 'slide-horizontal',
+            backButtonHidden: true,
         });
     };
 
@@ -108,7 +110,8 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         padding: 10,
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        backgroundColor: '#fff'
     },
     rowStyle: {
         flexDirection: 'row',

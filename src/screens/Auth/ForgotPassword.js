@@ -21,6 +21,10 @@ class ForgotPassword extends Component {
         }
     };
 
+    static navigatorStyle = {
+        tabBarHidden: true
+    };
+
     toLogin = () => {
         this.props.navigator.pop({
             animationType: "slide-horizontal"
@@ -85,7 +89,8 @@ class ForgotPassword extends Component {
 const styles = StyleSheet.create({
     contentWrapper: {
         flex: 1,
-        width: '100%'
+        width: '100%',
+        backgroundColor: '#fff'
     },
     main: {
         marginTop: 70,

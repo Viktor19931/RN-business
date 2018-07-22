@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
         padding: 5,
         borderWidth: 1,
         borderColor: '#000',
-
+        backgroundColor: '#fff'
     },
     invalid: {
         backgroundColor: '#f9c0c0',

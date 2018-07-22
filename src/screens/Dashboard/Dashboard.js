@@ -114,6 +114,8 @@ class Dashboard extends Component {
         this.props.navigator.push({
             screen: 'App.SwotAnalysisScreen',
             title: 'Swot Analysis',
+            animationType: 'slide-horizontal',
+            backButtonTitle: '',
             passProps: { ...item}
         });
     };
@@ -127,6 +129,8 @@ class Dashboard extends Component {
             //         {}
             //     ]
             // },
+            animated: true,
+            animationType: 'slide-horizontal',
             backButtonHidden: true
         })
     };

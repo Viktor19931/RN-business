@@ -19,13 +19,16 @@ const startTabs = () => {
                 icon: assignment,
             },
             {
-                screen: "App.Tab3",
+                screen: "App.RankingScreen",
                 label: "Ranking",
                 title: "UR Business - Rankings",
                 icon: ranking
             }
         ],
-        // animationType: 'slide-down'
+        appStyle: {
+            tabBarSelectedButtonColor: "orange"
+        },
+        animationType: 'slide-down'
     });
 };
 

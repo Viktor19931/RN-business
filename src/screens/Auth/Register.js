@@ -98,6 +98,10 @@ class Register extends Component {
         }
     };
 
+    static navigatorStyle = {
+        tabBarHidden: true
+    };
+
     toLogin = () => {
         this.props.navigator.pop({
             animated: true, // does the popToRoot have transition animation or does it happen immediately (optional)
@@ -264,6 +268,8 @@ const styles = StyleSheet.create({
     },
     contentWrapper: {
         flex: 4,
+        backgroundColor: '#fff'
+
     },
     main: {
         marginTop: 12,

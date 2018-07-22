@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, Text, TouchableOpacity, KeyboardAvoidingView } from 'react-native';
 
-import startMainTabs from '../../compenents/MainTabs/startMainTabs';
+import startMainTabs from '../MainTabs/startMainTabs';
 import InputField from "../../compenents/InputField/InputField";
 import Button from "../../compenents/Button/Button";
 import Logo from "./Logo";
@@ -146,7 +146,8 @@ const styles = StyleSheet.create({
         flex: 1,
         // marginTop: 70,
         justifyContent: 'space-between',
-        width: '100%'
+        width: '100%',
+        backgroundColor: '#fff'
     },
     main: {
         justifyContent: 'space-around',

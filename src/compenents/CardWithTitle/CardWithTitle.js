@@ -4,7 +4,7 @@ import {View, Text, StyleSheet, Dimensions} from 'react-native';
 class CardWithTitle extends Component {
     render() {
         return (
-            <View style={styles.container}>
+            <View style={[styles.container]}>
                 <View style={[styles.titleContainer, this.props.titleContainer]}>
                     <Text style={styles.titleText}>{this.props.title}</Text>
                 </View>

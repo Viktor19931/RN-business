@@ -78,8 +78,10 @@ class Assignments extends Component {
 
     cardDetailsHandler = item => {
         this.props.navigator.push({
-            screen: 'App.SwotAnalysis',
+            screen: 'App.SwotAnalysisScreen',
             title: 'Swot Analysis',
+            animated: true,
+            animationType: 'slide-horizontal',
             passProps: { ...item}
         });
     };

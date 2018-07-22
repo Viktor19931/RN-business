@@ -9,8 +9,7 @@ import SwotAnalysisScreen from './src/screens/SwotAnalysis/SwotAnalysis';
 import SwotAnalysisAcceptedScreen from './src/screens/SwotAnalysis/SwotAnalysisAccepted';
 import SwotAnalysisFinishScreen from './src/screens/SwotAnalysis/SwotAnalysisFinish';
 import FillCodeScreen from './src/screens/SwotAnalysis/SwotAnalysisFillCode';
-import Tab2 from './src/screens/Tab2/Tab2';
-import Tab3 from './src/screens/Tab3/Tab3';
+import RankingScreen from './src/screens/Ranking/Ranking';
 
 Navigation.registerComponent( "App.LoginScreen", () => LoginScreen );
 Navigation.registerComponent( "App.RegisterScreen", () => RegisterScreen );
@@ -22,6 +21,7 @@ Navigation.registerComponent( "App.SwotAnalysisScreen", () => SwotAnalysisScreen
 Navigation.registerComponent( "App.SwotAnalysisAcceptedScreen", () => SwotAnalysisAcceptedScreen);
 Navigation.registerComponent( "App.SwotAnalysisFinishScreen", () => SwotAnalysisFinishScreen);
 Navigation.registerComponent( "App.FillCodeScreen", () => FillCodeScreen);
+Navigation.registerComponent( "App.RankingScreen", () => RankingScreen);
 Navigation.registerComponent( "App.Tab2", () => Tab2 );
 Navigation.registerComponent( "App.Tab3", () => Tab3 );
 
