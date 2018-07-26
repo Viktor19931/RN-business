@@ -6,6 +6,7 @@ import InputField from "../../compenents/InputField/InputField";
 import Button from "../../compenents/Button/Button";
 import Logo from "./Logo";
 import validate from "../../utility/validation";
+import MainFont from "../../compenents/MainFont/MainFont";
 
 class Login extends Component {
     state = {
@@ -15,7 +16,7 @@ class Login extends Component {
         },
         controls: {
             email: {
-                value: "mail@gmail.com",
+                value: "",
                 valid: true,
                 validationRules: {
                     isEmail: true
@@ -23,7 +24,7 @@ class Login extends Component {
                 touched: true
             },
             password: {
-                value: "111111",
+                value: "",
                 valid: true,
                 validationRules: {
                     minLength: 6
@@ -42,7 +43,8 @@ class Login extends Component {
     };
 
     static navigatorStyle = {
-        tabBarHidden: true
+        tabBarHidden: true,
+        navBarHidden: true
     };
 
     onLoginPressed = () => {
@@ -129,10 +131,10 @@ class Login extends Component {
                     </View>
                     <View style={optionContainer}>
                         <TouchableOpacity onPress={this.toRegister}>
-                            <Text style={textStyle}>Register</Text>
+                            <MainFont style={textStyle}>Register</MainFont>
                         </TouchableOpacity>
                         <TouchableOpacity onPress={this.toForgotPassword}>
-                            <Text style={textStyle}>Forgot Password</Text>
+                            <MainFont style={textStyle}>Forgot Password</MainFont>
                         </TouchableOpacity>
                     </View>
                 </View>

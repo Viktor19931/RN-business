@@ -23,7 +23,8 @@ const startTabs = () => {
                 label: "Ranking",
                 title: "UR Business - Rankings",
                 icon: ranking
-            }
+            },
+
         ],
         appStyle: {
             tabBarSelectedButtonColor: "orange"

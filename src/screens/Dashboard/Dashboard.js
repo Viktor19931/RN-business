@@ -6,6 +6,7 @@ import avatar from '../../assets/ava.png';
 import CardWithTitle from "../../compenents/CardWithTitle/CardWithTitle";
 import InputField from "../../compenents/InputField/InputField";
 import CardItem from "../../compenents/CardItem/CardItem";
+import MainFont from "../../compenents/MainFont/MainFont";
 
 class Dashboard extends Component {
     state = {
@@ -24,13 +25,13 @@ class Dashboard extends Component {
         currentAssignments: [
             {
                 id: 1,
-                title: "MTO1",
+                title: "MTO1dsfdfsdfsdfsdf",
                 revard: 327,
                 status: 'open',
                 from: '13-05-2018',
                 till: '24-05-2018',
-                description: "dsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds g "
-            },
+                description: "start dsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsgdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsgdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsgdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsgdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsgdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsgdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsgdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsgdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsgdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsgdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsgdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds g END"
+    },
             {
                 id: 12,
                 title: "MTO2",
@@ -153,14 +154,26 @@ class Dashboard extends Component {
                 <View style={styles.container}>
                     <CardWithTitle title={'Profile'}>
                         <View style={styles.innerContainer}>
-                            <Text style={styles.boldText}>Name:</Text>
-                            <Text style={styles.boldText}>Class:</Text>
-                            <Text style={styles.boldText}>Project group:</Text>
+                            <MainFont>
+                                <Text style={styles.boldText}>Name:</Text>
+                            </MainFont>
+                            <MainFont>
+                                <Text style={styles.boldText}>Class:</Text>
+                            </MainFont>
+                            <MainFont>
+                                <Text style={styles.boldText}>Project group:</Text>
+                            </MainFont>
                         </View>
                         <View style={{flex: 1, paddingLeft: 10, justifyContent: 'space-between'}}>
-                            <Text>{this.state.profile.name}</Text>
-                            <Text>{this.state.profile.className}</Text>
-                            <Text>{this.state.profile.project_group}</Text>
+                            <MainFont>
+                                <Text>{this.state.profile.name}</Text>
+                            </MainFont>
+                            <MainFont>
+                                <Text>{this.state.profile.className}</Text>
+                            </MainFont>
+                            <MainFont>
+                                <Text>{this.state.profile.project_group}</Text>
+                            </MainFont>
                         </View>
                         <View style={{ alignItems: 'flex-end'}}>
                             <Image
@@ -171,12 +184,20 @@ class Dashboard extends Component {
                     </CardWithTitle>
                     <CardWithTitle title={'Coins'}>
                         <View style={styles.innerContainer}>
-                            <Text style={[styles.boldText, {marginBottom: 10}]}>Personal:</Text>
-                            <Text style={styles.boldText}>Project group:</Text>
+                            <MainFont style={[styles.boldText, {marginBottom: 10}]}>
+                                <Text>Personal:</Text>
+                            </MainFont>
+                            <MainFont style={styles.boldText}>
+                                <Text>Project group:</Text>
+                            </MainFont>
                         </View>
                         <View style={{flex: 1, paddingLeft: 10, justifyContent: 'space-between'}}>
-                            <Text>{this.state.coins.personal}</Text>
-                            <Text>{this.state.coins.project_group}</Text>
+                            <MainFont>
+                                <Text>{this.state.coins.personal}</Text>
+                            </MainFont>
+                            <MainFont>
+                                <Text>{this.state.coins.project_group}</Text>
+                            </MainFont>
                         </View>
                     </CardWithTitle>
                     <CardWithTitle title={'Target'}>

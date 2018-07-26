@@ -28,7 +28,9 @@ const styles = StyleSheet.create({
         padding: 5,
         borderWidth: 1,
         borderColor: '#000',
-        backgroundColor: '#fff'
+        backgroundColor: '#fff',
+        fontFamily: 'ComicSansMS',
+        fontSize: 15
     },
     invalid: {
         backgroundColor: '#f9c0c0',

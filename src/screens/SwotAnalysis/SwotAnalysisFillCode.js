@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import InputField from "../../compenents/InputField/InputField";
 import Button from "../../compenents/Button/Button";
+import MainFont from "../../compenents/MainFont/MainFont";
 
 class SwotAnalysisFillCode extends Component {
     onCancel = () => {
@@ -17,24 +18,26 @@ class SwotAnalysisFillCode extends Component {
         return (
             <View style={container}>
                 <View style={innerContainer}>
-                    <Text style={title}>Fill in the Code</Text>
-                        <InputField
-                            placeholder="Code"
-                            style={{marginBottom: 50}}
-                        />
-                        <View style={btnWrapper}>
-                            <Button
-                                onPress={this.onCancel}
-                            >
-                                Cancel
-                            </Button>
-                            <Button
-                                backgroundColor="#D6D6D6"
-                                onPress={this.onSend}
-                            >
-                                Send
-                            </Button>
-                        </View>
+                    <MainFont>
+                        <Text style={title}>Fill in the Code</Text>
+                    </MainFont>
+                    <InputField
+                        placeholder="Code"
+                        style={{marginBottom: 50}}
+                    />
+                    <View style={btnWrapper}>
+                        <Button
+                            onPress={this.onCancel}
+                        >
+                            Cancel
+                        </Button>
+                        <Button
+                            backgroundColor="#D6D6D6"
+                            onPress={this.onSend}
+                        >
+                            Send
+                        </Button>
+                    </View>
                 </View>
             </View>
         );

@@ -3,6 +3,7 @@ import {View, Text, StyleSheet, Image} from 'react-native';
 
 import CardWithTitle from "../../compenents/CardWithTitle/CardWithTitle";
 import coin from "../../assets/icons8-bitcoin-30.png";
+import MainFont from "../../compenents/MainFont/MainFont";
 
 class Ranking extends Component {
     state = {
@@ -32,10 +33,17 @@ class Ranking extends Component {
         return this.state.individual.map((el, i) => {
             return (
                 <View key={i} style={styles.cardBlock}>
-                    <Text style={{width: 20}}>{ (el.place || i+1) + '.' }</Text>
-                    <Text style={{width: 30}}>{el.amount}</Text>
+                    <MainFont>
+                        <Text style={{width: 20}}>{ (el.place || i+1) + '.' }</Text>
+                    </MainFont>
+                    <MainFont>
+                        <Text style={{width: 30}}>{el.amount}</Text>
+
+                    </MainFont>
                     <Image style={styles.image} source={coin}/>
-                    <Text>{el.owner === "you" ? "You" : null}</Text>
+                    <MainFont>
+                        <Text>{el.owner === "you" ? "You" : null}</Text>
+                    </MainFont>
                 </View>
             );
         });
@@ -45,8 +53,12 @@ class Ranking extends Component {
         return this.state.projectGroups.map((el, i) => {
             return (
                 <View key={i} style={styles.cardBlock}>
-                    <Text style={{width: 20}}>{ i+1 + '.' }</Text>
-                    <Text style={{width: 30}}>{el}</Text>
+                    <MainFont>
+                        <Text style={{width: 20}}>{ i+1 + '.' }</Text>
+                    </MainFont>
+                    <MainFont>
+                        <Text style={{width: 30}}>{el}</Text>
+                    </MainFont>
                     <Image style={styles.image} source={coin}/>
                 </View>
             );

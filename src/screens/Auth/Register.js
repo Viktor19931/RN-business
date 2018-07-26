@@ -99,7 +99,8 @@ class Register extends Component {
     };
 
     static navigatorStyle = {
-        tabBarHidden: true
+        tabBarHidden: true,
+        navBarHidden: true
     };
 
     toLogin = () => {

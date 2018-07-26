@@ -1,12 +1,15 @@
-import React, {Component} from 'react';
-import {View, Text, StyleSheet, Dimensions} from 'react-native';
+import React, { Component } from 'react';
+import { View, Text, StyleSheet, Dimensions } from 'react-native';
+import MainFont from "../MainFont/MainFont";
 
 class CardWithTitle extends Component {
     render() {
         return (
             <View style={[styles.container]}>
                 <View style={[styles.titleContainer, this.props.titleContainer]}>
-                    <Text style={styles.titleText}>{this.props.title}</Text>
+                    <MainFont>
+                        <Text style={styles.titleText}>{this.props.title}</Text>
+                    </MainFont>
                 </View>
                 <View style={[styles.contentContainer, this.props.contentContainer]}>
                     {this.props.children}

@@ -64,8 +64,64 @@ class Assignments extends Component {
                 description: "dsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds g "
             }
         ],
-        doneAssignments: [],
-        expiredAssignments: []
+        doneAssignments: [
+            {
+                id: 1,
+                title: "M3231",
+                revard: 137,
+                status: 'open',
+                from: '13-05-2018',
+                till: '24-05-2018',
+                description: "dsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds g "
+            },
+            {
+                id: 2,
+                title: "MT12213",
+                revard: 234,
+                status: 'open',
+                from: '13-05-2018',
+                till: '24-05-2018',
+                description: "dsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds g "
+            },
+            {
+                id: 3,
+                title: "MTO1",
+                revard: 34,
+                status: 'open',
+                from: '13-05-2018',
+                till: '24-05-2018',
+                description: "dsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds g "
+            }
+        ],
+        expiredAssignments: [
+            {
+                id: 1,
+                title: "M3231",
+                revard: 137,
+                status: 'open',
+                from: '13-05-2018',
+                till: '24-05-2018',
+                description: "dsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds g "
+            },
+            {
+                id: 2,
+                title: "MT12213",
+                revard: 234,
+                status: 'open',
+                from: '13-05-2018',
+                till: '24-05-2018',
+                description: "dsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds g "
+            },
+            {
+                id: 3,
+                title: "MTO1",
+                revard: 34,
+                status: 'open',
+                from: '13-05-2018',
+                till: '24-05-2018',
+                description: "dsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds gdsf dsfds f sdf ds f sdf  dsgdsg dsgdsg ds g dsg sd g dsg  dsg dsg ds g dsg ds g sd gds g "
+            }
+        ]
     };
 
     renderItem = ({ item }) => (
@@ -82,7 +138,8 @@ class Assignments extends Component {
             title: 'Swot Analysis',
             animated: true,
             animationType: 'slide-horizontal',
-            passProps: { ...item}
+            backButtonTitle: '',
+            passProps: { ...item }
         });
     };
 
@@ -110,6 +167,20 @@ class Assignments extends Component {
                         titleContainer={{borderTopWidth: 0}}
                     >
                         {this.assignmentsHandler('openAssignments')}
+                    </CardWithTitle>
+                    <CardWithTitle
+                        title={'Done Assignments'}
+                        contentContainer={styles.cardContentContainer}
+                        titleContainer={{borderTopWidth: 0}}
+                    >
+                        {this.assignmentsHandler('doneAssignments')}
+                    </CardWithTitle>
+                    <CardWithTitle
+                        title={'Expired Assignments'}
+                        contentContainer={styles.cardContentContainer}
+                        titleContainer={{borderTopWidth: 0}}
+                    >
+                        {this.assignmentsHandler('expiredAssignments')}
                     </CardWithTitle>
                 </View>
             </ScrollView>

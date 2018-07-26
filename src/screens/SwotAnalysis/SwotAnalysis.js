@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Dimensions } from 'react-native';
 
 import accept from '../../assets/checked.png';
 import Button from "../../compenents/Button/Button";
 import SwotInfo from "../../compenents/SwotInfo/SwotInfo";
+import MainFont from "../../compenents/MainFont/MainFont";
 
 class SwotAnalysis extends Component {
     onAccept = () => {
@@ -21,17 +22,21 @@ class SwotAnalysis extends Component {
         const { container, titleStyle, rowStyle, btnWrapper, btnStyle } = styles;
 
         return (
-            <ScrollView contentContainerStyle={container}>
-                <View style={{flex: 1, justifyContent: 'space-between'}}>
+            <ScrollView contentContainerStyle={[container, {minHeight: '100%'}]}>
+                <View style={{flex:1 , justifyContent: 'space-between', minHeight: '100%'}}>
                     <View style={{flex: 1}}>
                         <SwotInfo
                             {...this.props}
                         />
-                        <View style={rowStyle}>
-                            <Text style={titleStyle}>Description:</Text>
+                        <View style={[rowStyle]}>
+                            <MainFont>
+                                <Text style={titleStyle}>Description:</Text>
+                            </MainFont>
                         </View>
                         <View style={[rowStyle, {height: null}]}>
-                            <Text style={{marginTop: 10}}>{description}</Text>
+                            <MainFont>
+                                <Text style={{marginTop: 10}}>{description}</Text>
+                            </MainFont>
                         </View>
                     </View>
                     <View style={btnWrapper}>
@@ -52,7 +57,7 @@ class SwotAnalysis extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        width: Dimensions.get('window').width,
         padding: 10,
         justifyContent: 'space-between',
         backgroundColor: '#fff'
@@ -63,18 +68,19 @@ const styles = StyleSheet.create({
         height: 30
     },
     titleStyle: {
+        fontWeight: "700",
         flex: 1,
-        fontWeight: 'bold'
     },
     btnWrapper: {
+        height: 80,
         alignItems: 'center',
-        marginTop: 20,
-        marginBottom: 40
+        padding: 20,
     },
     btnStyle: {
         flexDirection: 'row',
-        paddingVertical: 4,
-        width: 105
+        paddingVertical: 0,
+        width: 105,
+        height: 34
     }
 });
 

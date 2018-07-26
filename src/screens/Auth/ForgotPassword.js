@@ -22,7 +22,8 @@ class ForgotPassword extends Component {
     };
 
     static navigatorStyle = {
-        tabBarHidden: true
+        tabBarHidden: true,
+        navBarHidden: true
     };
 
     toLogin = () => {

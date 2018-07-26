@@ -3,6 +3,7 @@ import {View, Text, StyleSheet, Image} from 'react-native';
 
 import RNPickerSelect from 'react-native-picker-select';
 import carret from "../../assets/icons8-sort-down-28.png";
+import MainFont from "../MainFont/MainFont";
 
 class SelectInput extends Component {
     render() {
@@ -19,7 +20,9 @@ class SelectInput extends Component {
                             textContainer,
                             !this.props.valid && this.props.touched ?  invalidStyle : null
                         ]}>
-                            <Text style={text}>{this.props.value}</Text>
+                            <MainFont style={{textAlign: 'auto', marginLeft: 5}}>
+                                <Text style={text}>{this.props.value}</Text>
+                            </MainFont>
                         </View>
 
                         <View style={buttonStyle}>

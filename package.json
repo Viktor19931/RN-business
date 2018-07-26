@@ -15,6 +15,9 @@
     "iosx": "react-native run-ios --simulator \"iPhone X\"",
     "test": "jest"
   },
+  "rnpm": {
+  "assets": ["./src/assets/fonts"]
+},
   "jest": {
     "preset": "react-native"
   },

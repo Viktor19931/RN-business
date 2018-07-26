@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
-import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
+import {View, Text, StyleSheet, TouchableOpacity, Dimensions} from 'react-native';
 import Button from "../../compenents/Button/Button";
 
 import frame from "../../assets/frame.png";
 import pencil from "../../assets/pencil-edit-button.png";
 import SwotInfo from "../../compenents/SwotInfo/SwotInfo";
 import QRCodeScanner from "react-native-qrcode-scanner";
+import MainFont from "../../compenents/MainFont/MainFont";
 
 class SwotAnalysisFinish extends Component {
     state = {
@@ -40,8 +41,7 @@ class SwotAnalysisFinish extends Component {
     };
 
     render() {
-        const { description } = this.props;
-        const { container, titleStyle, rowStyle, btnWrapper, btnStyle } = styles;
+        const { container, btnWrapper, btnStyle, title } = styles;
         let content = (
             <View style={{flex: 1}}>
                 <View>
@@ -50,7 +50,9 @@ class SwotAnalysisFinish extends Component {
                     />
                 </View>
                 <View style={btnWrapper}>
-                    <Text style={{textAlign: 'center', marginVertical: 47, fontSize: 20, fontWeight: 'bold'}}>Finish</Text>
+                    <MainFont style={title}>
+                        <Text>Finish</Text>
+                    </MainFont>
                     <Button
                         source={frame}
                         style={btnStyle}
@@ -84,14 +86,15 @@ class SwotAnalysisFinish extends Component {
             content = (
                 <QRCodeScanner
                     onRead={this.onCloseQRcode}
+                    cameraStyle={{width: Dimensions.get('window').width - 20}}
                     topContent={
                         <Text style={styles.centerText}>
-                            Go to <Text style={styles.textBold}>wikipedia.org/wiki/QR_code</Text> on your computer and scan the QR code.
+                            Scan the QR code.
                         </Text>
                     }
                     bottomContent={
                         <TouchableOpacity style={styles.buttonTouchable} onPress={this.onCloseQRcode}>
-                            <Text style={styles.buttonText}>OK. Got it!</Text>
+                            <Text style={styles.buttonText}>Cancel</Text>
                         </TouchableOpacity>
                     }
                 />
@@ -111,7 +114,14 @@ const styles = StyleSheet.create({
         flex: 1,
         padding: 10,
         justifyContent: 'space-between',
-        backgroundColor: '#fff'
+        backgroundColor: '#fff',
+        width: null
+    },
+    title: {
+        textAlign: 'center',
+        marginVertical: 47,
+        fontSize: 20,
+        fontWeight: 'bold'
     },
     rowStyle: {
         flexDirection: 'row',
